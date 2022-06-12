@@ -1,4 +1,6 @@
 const inquirer = require('inquirer');  // In place to be able to use the inquirer package from NPM
+const generateSite = require('generate-site.js')
+
 
 return inquirer
     .prompt([
@@ -28,6 +30,14 @@ return inquirer
           }
         }
       },
+
+    //Table of contents section 
+      {
+        type: 'input',
+        name: 'Table of Contents',
+        message: 'Table of Contents',
+      },
+
       //Enter license you'd like to use 
       {
         type: 'checkbox',
