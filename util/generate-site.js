@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 `# ${data.title}
 https://github.com/${data.username}/${data.title}
 

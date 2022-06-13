@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');  // In place to be able to use the inquirer package from NPM
-const generateSite = require('generate-site.js')
-
+const generateSite = require('./util/generate-site.js');
+const util = require('util');
+const fs = require('fs');
 
 return inquirer
     .prompt([
