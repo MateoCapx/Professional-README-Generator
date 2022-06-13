@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');  // In place to be able to use the inquirer package from NPM
-const generateSite = require('generate-site.js');
-const util = require('util');
-const fs = require('fs');
+const generateSite = require('./generate-site');
+const fs = require("fs");
+const { strictEqual } = require('assert');
 
 return inquirer
     .prompt([
@@ -94,4 +94,13 @@ return inquirer
         }
 
       },
-    ])
+    ]).then(function(data){
+      console.log(data)
+
+      let content = generate-site.js(data)
+      console.log(content)
+      fs.writeFile("./ReadMe.md", content, function(err){
+        if(err)throw err
+        console.log("Success")
+      })
+    })
