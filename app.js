@@ -18,6 +18,7 @@ return inquirer
           }
         }
       },
+
       {
         type: 'input',
         name: 'description',
@@ -39,13 +40,29 @@ return inquirer
         message: 'Table of Contents',
       },
 
-      //Enter license you'd like to use 
+      //How will you test your app
+      {
+        type: 'input',
+        name: 'test',
+        message: 'How will you test this app?',
+      },
+
+      //Enter what license you'd like to use 
       {
         type: 'checkbox',
         name: 'license',
         message: 'What License would you like to use? (Check all that apply)',
         choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0']
       },
+
+      //Enter what needed to install this application
+      {
+        type: 'checkbox',
+        name: 'installation',
+        message: 'What dependecies must be installed to run the application properly ? (Check all that apply)',
+        choices: ['inquire', 'fs', 'util', 'node.js',]
+      },
+
       //Enter GitHub Username section
       {
         type: 'input',
@@ -60,10 +77,11 @@ return inquirer
           }
         }
       },
+      
         //Enter email section
       {
         type: 'input',
-        name: 'E-mail',
+        name: 'Email',
         message: 'Enter your e-mail address. (Required)',
         validate: emailValidate =>{
             if(emailValidate){
