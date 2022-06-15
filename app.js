@@ -101,6 +101,8 @@ return inquirer
 
   })
 function createFile(data) {
-  console.log("Hey",data)
+  console.log('---------------->', data)
 fs.writeFileSync(path.join(process.cwd(),"GenerateReadMe.md"), generateSite(JSON.stringify(data)))
+
 }
+
