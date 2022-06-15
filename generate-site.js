@@ -1,6 +1,7 @@
+const fs = require('fs');
 function generateSite(data){
 
-const fs = require('fs');
+
 
 `# ${data.Title}
 https://github.com/${data.username}/${data.Title}
@@ -37,10 +38,11 @@ The following is needed to run the test : ${data.tests}
 If you have any questions about the repo, you can contact me at :${data.Email}
 `
 
-console.log('WORKSSSSSS')
+
 
 };
-module.exports = generate-site.js;
+
+module.exports = generateSite;
 
 
 // # Badges
