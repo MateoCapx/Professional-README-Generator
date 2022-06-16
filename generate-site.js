@@ -1,7 +1,8 @@
 const fs = require('fs');
 function generateSite(data){
 
-
+// console.log("This is a sting")
+// console.log(data)
 
 `# ${data.Title}
 https://github.com/${data.username}/${data.Title}

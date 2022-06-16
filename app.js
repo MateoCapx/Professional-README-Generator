@@ -1,7 +1,8 @@
 const inquirer = require('inquirer');  // In place to be able to use the inquirer package from NPM
 const generateSite = require('./generate-site'); // Grabbing this file and using it with this application
 const fs = require("fs");
- const path =require("path")
+ const path =require("path");
+const { title } = require('process');
 
 return inquirer
   .prompt([
@@ -36,8 +37,8 @@ return inquirer
     //Table of contents section 
     {
       type: 'input',
-      name: 'Table of Contents',
-      message: 'Table of Contents',
+      name: 'TableOfContents',
+      message: 'TableOfContents',
     },
 
     //How will you test your app
@@ -94,15 +95,27 @@ return inquirer
       }
 
     },
-  ]).then(function (data) {
+  ]).then(function(data){
+    console.log(`Heyy ${JSON.stringify(data)}`)
+
+    fs.writeFile('./README.md', generateSite, err=>{
+      if(err){
+        console.log(err)
+      }else{
+        console.log(" Works ")
+      }
+    })
+    // Title,
+    // username,
+    // description,
+    // installation,
+    // license,
+    // email,
+    // usage,
+    // TableOfContents,
+    // test
+  }
 
 
-    createFile(data)
-
-  })
-function createFile(data) {
-  console.log('---------------->', data)
-fs.writeFileSync(path.join(process.cwd(),"GenerateReadMe.md"), generateSite(JSON.stringify(data)))
-
-}
+)
 
