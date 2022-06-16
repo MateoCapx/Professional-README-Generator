@@ -1,24 +1,38 @@
-# Professional-README-Generator
+# Coding 101
 
-GIVEN a command-line application that accepts user input
 
-WHEN I am prompted for information about my application repository
-THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+# Description
+# Learn How to code in no time
 
-WHEN I enter my project title
-THEN this is displayed as the title of the README
 
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
+#  Table of Contents
+* [Installation](#installation)
+* [Usage](#Usage) 
+* [tests](#tests) 
+* [License](#license) 
+* [Questions](#questions) 
 
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
 
-WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
 
-WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
+# Installation
 
-WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README
+The following dependencies must be installed to run the application properly: inquire,fs,node.js
+
+
+#  Usage
+How will a user use your app ? For anyone wanting to learn how to code, this will be a great app
+
+
+# License
+
+This project is licensed under the : GNU AGPLv3,GNU LGPLv3,Mozilla Public License 2.0
+
+
+# Tests
+The following is needed to run the test : With Node.js
+
+# Questions
+
+If you have any questions about the repo, you can contact me at : https://github.com/MateoCapx
+
+Email: mmcpherson@gmail.com

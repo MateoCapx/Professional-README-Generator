@@ -2,7 +2,7 @@ const inquirer = require('inquirer');  // In place to be able to use the inquire
 const generateSite = require('./generate-site'); // Grabbing this file and using it with this application
 const fs = require("fs");
  const path =require("path");
-const { title } = require('process');
+
 
 return inquirer
   .prompt([
@@ -46,6 +46,12 @@ return inquirer
       type: 'input',
       name: 'test',
       message: 'How will you test this app?',
+    },
+//How will you use the  app
+    {
+      type: 'input',
+      name: 'usage',
+      message: 'How will you use the app?',
     },
 
     //Enter what license you'd like to use 
@@ -98,24 +104,16 @@ return inquirer
   ]).then(function(data){
     console.log(`Heyy ${JSON.stringify(data)}`)
 
-    fs.writeFile('./README.md', generateSite, err=>{
+    fs.writeFile('./README.md', generateSite(data), err=>{
       if(err){
         console.log(err)
       }else{
         console.log(" Works ")
       }
     })
-    // Title,
-    // username,
-    // description,
-    // installation,
-    // license,
-    // email,
-    // usage,
-    // TableOfContents,
-    // test
   }
 
 
 )
 
+module.exports = prompt;
