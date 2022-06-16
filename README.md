@@ -26,6 +26,7 @@ THEN this is added to the section of the README entitled Questions, with a link 
 WHEN I enter my email address
 THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
 
+![Screen Shot 2022-06-16 at 12 29 08 PM](https://user-images.githubusercontent.com/102997990/174120158-37386aea-a89a-4c55-bb9d-4c2752a5f50e.png)
 
 WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
